@@ -15,8 +15,6 @@ public protocol NetworkService {
     var baseURL: String { get }
     var adapters: [Alamofire.Adapter] { get }
     var retriers: [Alamofire.Retrier] { get }
-    
-    init(environment: NetworkEnvironment)
 }
  
 extension NetworkService {

@@ -13,13 +13,4 @@ public protocol NetworkService {
     
     var environment: NetworkEnvironment { get }
     var baseURL: String { get }
-    var adapters: [Alamofire.Adapter] { get }
-    var retriers: [Alamofire.Retrier] { get }
-}
- 
-extension NetworkService {
-    
-    var interceptor: Alamofire.RequestInterceptor {
-        return Interceptor(adapters: adapters, retriers: retriers, interceptors: [])
-    }
 }

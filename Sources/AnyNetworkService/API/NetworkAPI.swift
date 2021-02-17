@@ -11,8 +11,7 @@ import Alamofire
 
 public protocol NetworkAPI {
     
-    var service: NetworkService { get }
-    var path: String { get }
+    var url: String { get }
     var method: Alamofire.HTTPMethod { get }
     var headers: Alamofire.HTTPHeaders { get }
     var parameters: Alamofire.Parameters { get }
@@ -20,10 +19,6 @@ public protocol NetworkAPI {
 }
 
 extension NetworkAPI {
-    
-    public var url: String {
-        return service.baseURL + path
-    }
     
     public var headers: Alamofire.HTTPHeaders {
         return HTTPHeaders()
@@ -35,5 +30,18 @@ extension NetworkAPI {
     
     public var encoding: Alamofire.ParameterEncoding {
         return URLEncoding()
+    }
+}
+
+public protocol ServicedNetworkAPI: NetworkAPI {
+    
+    var service: NetworkService { get }
+    var path: String { get }
+}
+
+extension ServicedNetworkAPI {
+    
+    public var url: String {
+        return service.baseURL + path
     }
 }

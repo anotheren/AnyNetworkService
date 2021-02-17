@@ -17,8 +17,7 @@ extension NetworkSession {
                                method: api.method,
                                parameters: api.parameters,
                                encoding: api.encoding,
-                               headers: api.headers,
-                               interceptor: api.service.interceptor)
+                               headers: api.headers)
             .validate()
             .responseData { response in
                 switch response.result {

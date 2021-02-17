@@ -16,8 +16,7 @@ extension NetworkSession {
         return session.upload(multipartFormData: { api.handle(formData: $0) },
                               to: api.url,
                               method: api.method,
-                              headers: api.headers,
-                              interceptor: api.service.interceptor)
+                              headers: api.headers)
             .validate()
             .responseData { response in
                 switch response.result {

@@ -39,6 +39,7 @@
 		A04B1F2125A5500A004B3134 /* AnyNetworkService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnyNetworkService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04B1F2425A5500A004B3134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A04EF3EF25A60546008980CF /* NetworkServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceError.swift; sourceTree = "<group>"; };
+		A051CC4025DCF0E200A38C5E /* AnyNetworkService.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AnyNetworkService.podspec; sourceTree = "<group>"; };
 		A070D4B125AB419E00B00467 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A070D4B325AB41B300B00467 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A0F3B15425A5553500B89F0F /* RequestNetworkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestNetworkAPI.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 			children = (
 				A070D4B325AB41B300B00467 /* README.md */,
 				A070D4B125AB419E00B00467 /* LICENSE */,
+				A051CC4025DCF0E200A38C5E /* AnyNetworkService.podspec */,
 				A04B1F0F25A54CDF004B3134 /* Sources */,
 				A04B1F0E25A54CDF004B3134 /* Products */,
 				5EAFD6CCC9C0C590F56CB314 /* Pods */,
@@ -509,7 +511,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.AnyNetworkService;
 				PRODUCT_NAME = AnyNetworkService;
 				SKIP_INSTALL = YES;
@@ -537,7 +539,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.AnyNetworkService;
 				PRODUCT_NAME = AnyNetworkService;
 				SKIP_INSTALL = YES;
@@ -566,7 +568,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.AnyNetworkService;
 				PRODUCT_NAME = AnyNetworkService;
 				SDKROOT = macosx;
@@ -595,7 +597,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.AnyNetworkService;
 				PRODUCT_NAME = AnyNetworkService;
 				SDKROOT = macosx;

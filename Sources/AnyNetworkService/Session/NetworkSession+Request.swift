@@ -11,7 +11,7 @@ import Alamofire
 
 extension NetworkSession {
     
-    public func request<API: RequestNetworkAPI>(api: API, completion: @escaping (Result<API.ResultType, NetworkServiceError>) -> Void) -> DataRequest {
+    public func request<API: RequestNetworkAPI>(api: API, completion: @escaping (Result<API.ResultType, NetworkError>) -> Void) -> DataRequest {
         
         return session.request(api.url,
                                method: api.method,
@@ -35,6 +35,6 @@ extension NetworkSession {
 }
 
 @discardableResult
-public func requestData<API: RequestNetworkAPI>(api: API, session: NetworkSession = .default, completion: @escaping (Result<API.ResultType, NetworkServiceError>) -> Void) -> Alamofire.DataRequest {
+public func requestData<API: RequestNetworkAPI>(api: API, session: NetworkSession = .default, completion: @escaping (Result<API.ResultType, NetworkError>) -> Void) -> Alamofire.DataRequest {
     return session.request(api: api, completion: completion)
 }

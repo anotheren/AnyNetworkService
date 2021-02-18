@@ -1,5 +1,5 @@
 //
-//  NetworkServiceError.swift
+//  NetworkError.swift
 //  AnyNetworkService
 //
 //  Created by 刘栋 on 2021/1/6.
@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-public enum NetworkServiceError: Error {
+public enum NetworkError: Error {
     
     case system(AFError)
     case service(Error)

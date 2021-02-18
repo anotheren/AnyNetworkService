@@ -11,7 +11,7 @@ import Alamofire
 
 extension NetworkSession {
     
-    public func upload<API: UploadNetworkAPI>(api: API, completion: @escaping (Result<API.ResultType, NetworkServiceError>) -> Void) -> UploadRequest {
+    public func upload<API: UploadNetworkAPI>(api: API, completion: @escaping (Result<API.ResultType, NetworkError>) -> Void) -> UploadRequest {
         
         return session.upload(multipartFormData: { api.handle(formData: $0) },
                               to: api.url,
@@ -34,6 +34,6 @@ extension NetworkSession {
 }
 
 @discardableResult
-public func upload<API: UploadNetworkAPI>(api: API, network: NetworkSession, completion: @escaping (Result<API.ResultType, NetworkServiceError>) -> Void) -> Alamofire.UploadRequest {
+public func upload<API: UploadNetworkAPI>(api: API, network: NetworkSession, completion: @escaping (Result<API.ResultType, NetworkError>) -> Void) -> Alamofire.UploadRequest {
     return network.upload(api: api, completion: completion)
 }

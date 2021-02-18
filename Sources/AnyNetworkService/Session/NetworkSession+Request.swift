@@ -24,7 +24,11 @@ extension NetworkSession {
                 case let .failure(error):
                     completion(.failure(.system(error)))
                 case let .success(data):
-                    completion(api.handle(response: data).flatMapError { .failure(.service($0)) })
+                    do {
+                        completion(.success(try api.handle(response: data)))
+                    } catch {
+                        completion(.failure(.service(error)))
+                    }
                 }
             }
     }

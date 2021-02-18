@@ -13,5 +13,5 @@ public protocol RequestNetworkAPI: NetworkAPI {
     
     associatedtype ResultType
     
-    func handle(response data: Data) -> Result<ResultType, Error>
+    func handle(response data: Data) throws -> ResultType
 }
